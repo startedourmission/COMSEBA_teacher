@@ -4,18 +4,26 @@
 - 구글 스프레드시트 데이터 자동 수집
 - 웹 기반 출결 및 상담 내역 자동 업로드
 
+
+### 구글 스프레드시트 연동
+   1. https://console.cloud.google.com/apis/credentials 에서 OAuth 2.0 Client IDs 클라이언트 json 파일을 다운로드 하세요
+   
+   2. 다운로드받은 json파일의 이름을 credientials.json으로 바꿔주세요.
+
+   3. main.ipynb 내에 구글 스프레드시트 ID와 시트 이름을 입력하세요.
+     ```python
+     SPREADSHEET_ID = "여기에_스프레드시트_ID_입력"
+     SHEET_NAME = "시트이름"
+     ```
+  4. main.ipynb를 실행하면 웹 상담/출결 자동 업로드를 수행합니다. 
+
+### 자동화 과정
+   - selenium이 웹 브라우저를 실행하여 로그인 및 데이터 입력을 자동으로 수행합니다.
+   - beautifulsoup4로 웹 페이지에서 필요한 정보를 파싱합니다.
+   - PyAutoGUI로 마우스 클릭, 키보드 입력 등 반복 작업을 자동화합니다.
+
+
 ### 의존성
-- Python 3.8 이상
-- selenium (웹 자동화)
-- beautifulsoup4 (HTML 파싱)
-- PyAutoGUI (GUI 자동화)
-
-설치 예시:
-````bash
-pip install selenium beautifulsoup4 PyAutoGUI
-````
-
-각 패키지는 다음과 같은 역할을 합니다:
-- **selenium**: 웹 브라우저를 자동으로 제어하여 출결 및 상담 정보를 입력합니다.
-- **beautifulsoup4**: 웹 페이지에서 필요한 데이터를 추출합니다.
-- **PyAutoGUI**: 마우스와 키보드 자동 제어로 반복 작업을 수행합니다.
+- Python >= 3.8
+- selenium 
+- beautifulsoup4 
