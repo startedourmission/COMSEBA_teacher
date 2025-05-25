@@ -11,6 +11,7 @@
    2. 다운로드받은 json파일의 이름을 credientials.json으로 바꿔주세요.
 
    3. main.ipynb 내에 구글 스프레드시트 ID와 시트 이름을 입력하세요.
+   
      ```python
      SPREADSHEET_ID = "여기에_스프레드시트_ID_입력"
      SHEET_NAME = "시트이름"
