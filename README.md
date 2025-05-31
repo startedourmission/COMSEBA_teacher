@@ -14,14 +14,15 @@
    
      ```python
      SPREADSHEET_ID = "여기에_스프레드시트_ID_입력"
-     SHEET_NAME = "시트이름"
+     TODAY = "yyyy-mm-dd" # 기준 날짜 입력
+     ID = "" # 웹학원관리 ID
+     PW = "" # 웹학원관리 PW
      ```
   4. main.ipynb를 실행하면 웹 상담/출결 자동 업로드를 수행합니다. 
 
 ### 자동화 과정
    - selenium이 웹 브라우저를 실행하여 로그인 및 데이터 입력을 자동으로 수행합니다.
    - beautifulsoup4로 웹 페이지에서 필요한 정보를 파싱합니다.
-   - PyAutoGUI로 마우스 클릭, 키보드 입력 등 반복 작업을 자동화합니다.
 
 
 ### 의존성
